@@ -6,7 +6,18 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-
+@Getter
+@Setter
+@Data
+@Entity
+@Table(name = "userd")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long user_id;
+    String user_name;
+    String email;
+    String address;
+    String joined_date;
 
 }
