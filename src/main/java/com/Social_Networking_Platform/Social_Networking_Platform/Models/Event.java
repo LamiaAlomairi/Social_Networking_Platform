@@ -19,5 +19,6 @@ public class Event {
     String description;
     String start_date;
     String end_date;
+    String location;
 
 }
