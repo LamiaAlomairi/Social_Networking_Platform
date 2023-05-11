@@ -19,5 +19,5 @@ public class Post {
     String posted_date;
     Integer likes_count;
     Integer comments_count;
-    
+
 }
