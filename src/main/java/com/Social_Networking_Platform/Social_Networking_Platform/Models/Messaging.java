@@ -17,5 +17,5 @@ public class Messaging {
     Long messaging_id;
     String content;
     String sent_date;
-    
+
 }
