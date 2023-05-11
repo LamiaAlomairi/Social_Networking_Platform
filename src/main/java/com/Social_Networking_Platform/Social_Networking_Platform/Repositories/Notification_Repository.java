@@ -1,4 +1,7 @@
 package com.Social_Networking_Platform.Social_Networking_Platform.Repositories;
 
-public interface Notification_Repository {
+import com.Social_Networking_Platform.Social_Networking_Platform.Models.Notification;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface Notification_Repository extends JpaRepository<Notification, Long> {
 }

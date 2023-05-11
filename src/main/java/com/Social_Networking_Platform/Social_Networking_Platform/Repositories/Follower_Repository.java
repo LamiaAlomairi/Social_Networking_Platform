@@ -1,4 +1,7 @@
 package com.Social_Networking_Platform.Social_Networking_Platform.Repositories;
 
-public interface Follower_Repository {
+import com.Social_Networking_Platform.Social_Networking_Platform.Models.Follower;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface Follower_Repository extends JpaRepository<Follower, Long> {
 }

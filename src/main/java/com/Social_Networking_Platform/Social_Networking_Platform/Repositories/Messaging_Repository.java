@@ -1,4 +1,7 @@
 package com.Social_Networking_Platform.Social_Networking_Platform.Repositories;
 
-public interface Messaging_Repository {
+import com.Social_Networking_Platform.Social_Networking_Platform.Models.Messaging;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface Messaging_Repository extends JpaRepository<Messaging, Long> {
 }
