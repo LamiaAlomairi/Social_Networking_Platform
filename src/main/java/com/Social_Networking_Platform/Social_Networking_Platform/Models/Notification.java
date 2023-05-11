@@ -18,4 +18,7 @@ public class Notification {
     String text;
     String date_sent;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    User userd;
 }

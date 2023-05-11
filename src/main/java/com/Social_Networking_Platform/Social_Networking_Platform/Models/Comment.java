@@ -18,4 +18,11 @@ public class Comment {
     String content;
     String comment_date;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    User userd;
+
+    @ManyToOne
+    @JoinColumn(name = "post_id", referencedColumnName = "post_id")
+    Post post;
 }

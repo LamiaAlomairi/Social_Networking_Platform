@@ -17,4 +17,11 @@ public class Like {
     Long like_id;
     String like_date;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    User userd;
+
+    @ManyToOne
+    @JoinColumn(name = "post_id", referencedColumnName = "post_id")
+    Post post;
 }

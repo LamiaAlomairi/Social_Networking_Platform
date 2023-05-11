@@ -16,4 +16,7 @@ public class Follower {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long follower_id;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    User userd;
 }
