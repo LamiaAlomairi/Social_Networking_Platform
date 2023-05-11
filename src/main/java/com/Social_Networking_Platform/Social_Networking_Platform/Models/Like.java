@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Setter
 @Data
 @Entity
-@Table(name = "like")
+@Table(name = "social_like")
 public class Like {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
