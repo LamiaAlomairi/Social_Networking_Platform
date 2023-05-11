@@ -18,5 +18,5 @@ public class Group {
     String name_of_group;
     String created_date;
     Integer members_count;
-    
+
 }
