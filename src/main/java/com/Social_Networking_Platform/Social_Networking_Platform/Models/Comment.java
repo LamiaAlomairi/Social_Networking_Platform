@@ -17,5 +17,5 @@ public class Comment {
     Long comment_id;
     String content;
     String comment_date;
-    
+
 }
