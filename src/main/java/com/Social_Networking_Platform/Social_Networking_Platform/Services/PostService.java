@@ -1,23 +1,23 @@
 package com.Social_Networking_Platform.Social_Networking_Platform.Services;
 
 import com.Social_Networking_Platform.Social_Networking_Platform.Models.Post;
-import com.Social_Networking_Platform.Social_Networking_Platform.Repositories.Post_repository;
+import com.Social_Networking_Platform.Social_Networking_Platform.Repositories.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Post_Service {
+public class PostService {
     @Autowired
-    Post_repository post_repository;
+    PostRepository postRepository;
     public List<Post> getAllPosts() {
 
-        return post_repository.findAll();
+        return postRepository.findAll();
     }
 
     public Post getPostById(Long id) {
 
-        return post_repository.findById(id).get();
+        return postRepository.findById(id).get();
     }
 }

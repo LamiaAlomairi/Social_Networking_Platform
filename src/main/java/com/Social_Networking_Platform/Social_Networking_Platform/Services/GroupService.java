@@ -1,23 +1,23 @@
 package com.Social_Networking_Platform.Social_Networking_Platform.Services;
 
 import com.Social_Networking_Platform.Social_Networking_Platform.Models.Group;
-import com.Social_Networking_Platform.Social_Networking_Platform.Repositories.Group_Repository;
+import com.Social_Networking_Platform.Social_Networking_Platform.Repositories.GroupRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Group_Service {
+public class GroupService {
     @Autowired
-    Group_Repository group_repository;
+    GroupRepository groupRepository;
     public List<Group> getAllGroups() {
 
-        return group_repository.findAll();
+        return groupRepository.findAll();
     }
 
     public Group getGroupById(Long id) {
 
-        return group_repository.findById(id).get();
+        return groupRepository.findById(id).get();
     }
 }

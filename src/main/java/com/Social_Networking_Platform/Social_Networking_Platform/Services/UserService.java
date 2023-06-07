@@ -1,23 +1,23 @@
 package com.Social_Networking_Platform.Social_Networking_Platform.Services;
 
 import com.Social_Networking_Platform.Social_Networking_Platform.Models.User;
-import com.Social_Networking_Platform.Social_Networking_Platform.Repositories.User_Repository;
+import com.Social_Networking_Platform.Social_Networking_Platform.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class User_Service {
+public class UserService {
     @Autowired
-    User_Repository user_repository;
+    UserRepository userRepository;
     public List<User> getAllUsers() {
 
-        return user_repository.findAll();
+        return userRepository.findAll();
     }
 
     public User getUserById(Long id) {
 
-        return user_repository.findById(id).get();
+        return userRepository.findById(id).get();
     }
 }

@@ -1,23 +1,23 @@
 package com.Social_Networking_Platform.Social_Networking_Platform.Services;
 
 import com.Social_Networking_Platform.Social_Networking_Platform.Models.Like;
-import com.Social_Networking_Platform.Social_Networking_Platform.Repositories.Like_Repository;
+import com.Social_Networking_Platform.Social_Networking_Platform.Repositories.LikeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Like_Service {
+public class LikeService {
     @Autowired
-    Like_Repository like_repository;
+    LikeRepository likeRepository;
     public List<Like> getAllLikes() {
 
-        return like_repository.findAll();
+        return likeRepository.findAll();
     }
 
     public Like getLikeById(Long id) {
 
-        return like_repository.findById(id).get();
+        return likeRepository.findById(id).get();
     }
 }

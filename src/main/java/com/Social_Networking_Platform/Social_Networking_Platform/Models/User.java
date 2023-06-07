@@ -16,11 +16,11 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long user_id;
-    String user_name;
+    Long id;
+    String name;
     String email;
     String address;
-    String joined_date;
+    String joinedDate;
 
     @OneToMany(mappedBy = "userd")
     @JsonIgnore
@@ -44,7 +44,7 @@ public class User {
 
     @ManyToMany
     @JoinTable(name = "user_group", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "group_id"))
-    private List<Group> social_groups;
+    private List<Group> socialGroups;
 
     @ManyToMany
     @JoinTable(name = "user_event", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "event_id"))

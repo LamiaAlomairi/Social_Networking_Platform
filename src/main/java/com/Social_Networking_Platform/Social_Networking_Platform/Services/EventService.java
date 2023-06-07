@@ -1,23 +1,23 @@
 package com.Social_Networking_Platform.Social_Networking_Platform.Services;
 
 import com.Social_Networking_Platform.Social_Networking_Platform.Models.Event;
-import com.Social_Networking_Platform.Social_Networking_Platform.Repositories.Event_Repository;
+import com.Social_Networking_Platform.Social_Networking_Platform.Repositories.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Event_Service {
+public class EventService {
     @Autowired
-    Event_Repository event_repository;
+    EventRepository eventRepository;
     public List<Event> getAllEvents() {
 
-        return event_repository.findAll();
+        return eventRepository.findAll();
     }
 
     public Event getEventById(Long id) {
 
-        return event_repository.findById(id).get();
+        return eventRepository.findById(id).get();
     }
 }

@@ -1,23 +1,23 @@
 package com.Social_Networking_Platform.Social_Networking_Platform.Services;
 
 import com.Social_Networking_Platform.Social_Networking_Platform.Models.Notification;
-import com.Social_Networking_Platform.Social_Networking_Platform.Repositories.Notification_Repository;
+import com.Social_Networking_Platform.Social_Networking_Platform.Repositories.NotificationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Notification_Service {
+public class NotificationService {
     @Autowired
-    Notification_Repository notification_repository;
+    NotificationRepository notificationRepository;
     public List<Notification> getAllNotifications() {
 
-        return notification_repository.findAll();
+        return notificationRepository.findAll();
     }
 
     public Notification getNotificationById(Long id) {
 
-        return notification_repository.findById(id).get();
+        return notificationRepository.findById(id).get();
     }
 }

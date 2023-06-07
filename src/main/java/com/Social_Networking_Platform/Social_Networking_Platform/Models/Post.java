@@ -16,22 +16,22 @@ import java.util.List;
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long post_id;
+    Long id;
     Integer content;
-    String posted_date;
-    Integer likes_count;
-    Integer comments_count;
+    String postedDate;
+    Integer likesCount;
+    Integer commentsCount;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     User userd;
 
     @ManyToOne
-    @JoinColumn(name = "group_id", referencedColumnName = "group_id")
-    Group social_group;
+    @JoinColumn(name = "group_id", referencedColumnName = "id")
+    Group socialGroup;
 
     @ManyToOne
-    @JoinColumn(name = "event_id", referencedColumnName = "event_id")
+    @JoinColumn(name = "event_id", referencedColumnName = "id")
     Event event;
 
     @OneToMany(mappedBy = "post")

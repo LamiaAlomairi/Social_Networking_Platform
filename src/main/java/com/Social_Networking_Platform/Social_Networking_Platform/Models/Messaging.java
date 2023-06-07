@@ -16,9 +16,9 @@ import java.util.List;
 public class Messaging {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long messaging_id;
+    Long id;
     String content;
-    String sent_date;
+    String sentDate;
 
     @ManyToMany(mappedBy = "messagings")
     @JsonIgnore

@@ -12,20 +12,20 @@ import java.util.List;
 @Setter
 @Data
 @Entity
-@Table(name = "social_group")
+@Table(name = "socialGroup")
 public class Group {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long group_id;
-    String name_of_group;
-    String created_date;
-    Integer members_count;
+    Long id;
+    String nameOfGroup;
+    String createdDate;
+    Integer membersCount;
 
-    @ManyToMany(mappedBy = "social_groups")
+    @ManyToMany(mappedBy = "socialGroups")
     @JsonIgnore
     private List<User> userds;
 
-    @OneToMany(mappedBy = "social_group")
+    @OneToMany(mappedBy = "socialGroup")
     @JsonIgnore
     private List<Post> posts;
 }

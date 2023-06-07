@@ -10,18 +10,18 @@ import javax.persistence.*;
 @Setter
 @Data
 @Entity
-@Table(name = "social_like")
+@Table(name = "socialLike")
 public class Like {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long like_id;
-    String like_date;
+    Long id;
+    String date;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     User userd;
 
     @ManyToOne
-    @JoinColumn(name = "post_id", referencedColumnName = "post_id")
+    @JoinColumn(name = "post_id", referencedColumnName = "id")
     Post post;
 }
